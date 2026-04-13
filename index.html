@@ -51,6 +51,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
 .stat-l{font-size:10px;color:#888;margin-top:2px}
 .edu-deg{font-size:12px;font-weight:600;color:#1A1A2E}
 .edu-school{font-size:11px;color:#3C3489;margin-top:2px;line-height:1.6}
+@media(max-width:600px){
+body{padding:12px 8px}
+.wrap{grid-template-columns:1fr;border-radius:10px}
+.sidebar{border-right:none;border-bottom:1px solid #D0CEEE;padding:16px 14px;gap:14px}
+.avatar{width:48px;height:48px;font-size:16px}
+.name{font-size:14px;margin-top:8px}
+.sline{font-size:11px}
+.tag{font-size:10px}
+.tab{font-size:10px;padding:8px 10px}
+.panel{padding:14px 14px}
+.stat-n{font-size:15px}
+.jtitle{font-size:11px}
+.jmeta{font-size:10px}
+.jbody{font-size:10px}
+.ach-title{font-size:11px}
+.ach-body{font-size:10px}
+.str-name{font-size:11px}
+.str-body{font-size:10px}
+}
 </style>
 </head>
 <body>
@@ -66,7 +85,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
   <div>
     <div class="slabel">Contact</div>
     <div class="sline">Dublin, Ireland</div>
-    <div class="sline">doline.taq@gmail.com</div>
+    <div class="sline"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="73171c1f1a1d165d07120233141e121a1f5d101c1e">[email&#160;protected]</a></div>
     <div class="sline">+33 6 20 26 42 09</div>
   </div>
   <div>
@@ -258,18 +277,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
 </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function show(id,el){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  el.classList.add('active');
-}
-function toggle(el){
-  var wasOpen=el.classList.contains('open');
-  document.querySelectorAll('.str-card').forEach(c=>c.classList.remove('open'));
-  if(!wasOpen)el.classList.add('open');
-}
-</script>
-</body>
-</html>
+  el.classList.a
