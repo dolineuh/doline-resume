@@ -3,23 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doline Taquet — CV</title>
+<title>Doline Taquet</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#F5F5F3;min-height:100vh;padding:32px 16px;display:flex;justify-content:center;align-items:flex-start}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#F5F5F3;min-height:100vh;padding:24px 16px;display:flex;justify-content:center}
 .outer{max-width:860px;width:100%}
 .wrap{display:grid;grid-template-columns:210px minmax(0,1fr);border:1px solid #E0DED8;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 2px 16px rgba(0,0,0,.07)}
 .sidebar{background:#EEEDFE;padding:22px 16px;display:flex;flex-direction:column;gap:18px;border-right:1px solid #D0CEEE}
-.avatar{width:60px;height:60px;border-radius:50%;background:#534AB7;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;color:#EEEDFE;letter-spacing:1px}
+.avatar{width:60px;height:60px;border-radius:50%;background:#534AB7;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;color:#EEEDFE}
 .name{font-size:16px;font-weight:600;color:#26215C;line-height:1.3;margin-top:10px}
 .role-tag{font-size:11px;color:#534AB7;background:#AFA9EC;padding:3px 8px;border-radius:20px;display:inline-block;margin-top:4px}
 .slabel{font-size:10px;font-weight:600;letter-spacing:.07em;color:#534AB7;text-transform:uppercase;margin-bottom:6px}
 .sline{font-size:12px;color:#3C3489;line-height:1.75}
 .tag{display:inline-block;font-size:11px;background:#AFA9EC;color:#26215C;padding:2px 7px;border-radius:10px;margin:2px 2px 2px 0}
-.main{display:flex;flex-direction:column;background:#fff}
-.tab-row{display:flex;border-bottom:1px solid #ECEAE4;background:#FAFAF8}
-.tab{font-size:11px;font-weight:600;padding:10px 14px;cursor:pointer;color:#888;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s}
-.tab:hover{color:#534AB7}
+.main{display:flex;flex-direction:column;background:#fff;min-width:0}
+.tab-row{display:flex;border-bottom:1px solid #ECEAE4;background:#FAFAF8;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tab{font-size:11px;font-weight:600;padding:10px 14px;cursor:pointer;color:#888;border-bottom:2px solid transparent;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:rgba(0,0,0,0);touch-action:manipulation;user-select:none}
 .tab.active{color:#534AB7;border-bottom-color:#534AB7;background:#fff}
 .panel{display:none;padding:20px 22px}.panel.active{display:block}
 .sec-head{font-size:10px;font-weight:600;letter-spacing:.07em;color:#534AB7;text-transform:uppercase;border-bottom:1px solid #AFA9EC;padding-bottom:5px;margin-bottom:12px}
@@ -34,8 +33,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
 .ach{background:#EEEDFE;border-radius:8px;padding:10px 12px;margin-bottom:8px}
 .ach-title{font-size:12px;font-weight:600;color:#26215C}
 .ach-body{font-size:11px;color:#3C3489;line-height:1.5;margin-top:3px}
-.str-card{border:1px solid #E0DED8;border-radius:8px;padding:12px 14px;margin-bottom:8px;cursor:pointer;transition:border-color .15s}
-.str-card:hover{border-color:#AFA9EC}
+.str-card{border:1px solid #E0DED8;border-radius:8px;padding:12px 14px;margin-bottom:8px;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);touch-action:manipulation}
 .str-card.open{border-color:#7F77DD;border-width:1.5px}
 .str-top{display:flex;align-items:center;gap:8px}
 .str-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -51,24 +49,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;ba
 .stat-l{font-size:10px;color:#888;margin-top:2px}
 .edu-deg{font-size:12px;font-weight:600;color:#1A1A2E}
 .edu-school{font-size:11px;color:#3C3489;margin-top:2px;line-height:1.6}
-@media(max-width:600px){
-body{padding:12px 8px}
-.wrap{grid-template-columns:1fr;border-radius:10px}
-.sidebar{border-right:none;border-bottom:1px solid #D0CEEE;padding:16px 14px;gap:14px}
-.avatar{width:48px;height:48px;font-size:16px}
+@media(max-width:640px){
+body{padding:10px 8px}
+.wrap{grid-template-columns:1fr;border-radius:10px;overflow:visible;border:1px solid #E0DED8}
+.sidebar{border-right:none;border-bottom:1px solid #D0CEEE;padding:14px;gap:12px}
+.avatar{width:44px;height:44px;font-size:15px}
 .name{font-size:14px;margin-top:8px}
 .sline{font-size:11px}
 .tag{font-size:10px}
-.tab{font-size:10px;padding:8px 10px}
-.panel{padding:14px 14px}
+.main{overflow:visible;border-radius:0 0 10px 10px}
+.tab-row{border-radius:0}
+.tab{font-size:11px;padding:10px 12px}
+.panel{padding:14px}
 .stat-n{font-size:15px}
-.jtitle{font-size:11px}
-.jmeta{font-size:10px}
-.jbody{font-size:10px}
-.ach-title{font-size:11px}
-.ach-body{font-size:10px}
-.str-name{font-size:11px}
-.str-body{font-size:10px}
+.str-tag{display:none}
 }
 </style>
 </head>
@@ -85,7 +79,7 @@ body{padding:12px 8px}
   <div>
     <div class="slabel">Contact</div>
     <div class="sline">Dublin, Ireland</div>
-    <div class="sline"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="73171c1f1a1d165d07120233141e121a1f5d101c1e">[email&#160;protected]</a></div>
+    <div class="sline">doline.taq@gmail.com</div>
     <div class="sline">+33 6 20 26 42 09</div>
   </div>
   <div>
@@ -139,7 +133,7 @@ body{padding:12px 8px}
       <div>
         <div class="jtitle">Learning, Development and Enablement Specialist</div>
         <div class="jmeta">Dublin | 2023 to present</div>
-        <div class="jbody">Designed and delivered onboarding and continuing education programmes for CS and Product Support across EMEA using Rise 360. Served as EU Delivery DRI for Concierge, white-glove programme for enterprise sellers (1M+ GPV) in EU, AU, and NA, against FCR, QA, CSAT, and handle time metrics. In 2026, redesigned the full learning experience using call driver analysis and built an AI-powered facilitator hub with Claude Code. Built AI call simulator (AI Studio, Gemini) across 7 regions, 70 scenarios. Partnered with CS Leadership and Sales Leads to align training calendars with product launch priorities.</div>
+        <div class="jbody">Designed and delivered onboarding and continuing education programmes for CS and Product Support across EMEA using Rise 360. Served as EU Delivery DRI for Concierge, white-glove programme for enterprise sellers (1M+ GPV) in EU, AU, and NA, against FCR, QA, CSAT, and handle time metrics. In 2026, redesigned the full learning experience using call driver analysis and built an AI-powered facilitator hub with Claude Code. Built AI call simulator (AI Studio, Gemini) across 7 regions, 70 scenarios.</div>
       </div>
     </div>
     <div class="job">
@@ -155,10 +149,9 @@ body{padding:12px 8px}
       <div>
         <div class="jtitle">Product Support and Sales Specialist, Enterprise</div>
         <div class="jmeta">Dublin | 2021 to 2023</div>
-        <div class="jbody">Enterprise support combining technical troubleshooting, feature adoption coaching, and consultative product recommendations to help sellers understand the value of Square solutions. QA scores high 90s, 100% in multiple quarters. Recognised for CSAT and value attribution Q2 and Q3 2022.</div>
+        <div class="jbody">Enterprise support combining technical troubleshooting, feature adoption coaching, and consultative product recommendations. QA scores high 90s, 100% in multiple quarters. Recognised for CSAT and value attribution Q2 and Q3 2022.</div>
       </div>
     </div>
-
     <div class="sec-head" style="margin-top:8px">Apple</div>
     <div class="job">
       <div style="position:relative"><div class="dot"></div><div class="vline"></div></div>
@@ -168,7 +161,6 @@ body{padding:12px 8px}
         <div class="jbody">Technical support and customer education in French and English across hardware and iOS ecosystems.</div>
       </div>
     </div>
-
     <div class="divider">Earlier</div>
     <div class="job">
       <div style="position:relative"><div class="dot-sm"></div><div class="vline"></div></div>
@@ -191,9 +183,7 @@ body{padding:12px 8px}
   <div id="strengths" class="panel">
     <div class="str-card" onclick="toggle(this)">
       <div class="str-top">
-        <div class="str-icon" style="background:#EEEDFE">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" fill="#534AB7"/><rect x="9" y="1" width="6" height="6" rx="1.5" fill="#AFA9EC"/><rect x="1" y="9" width="6" height="6" rx="1.5" fill="#AFA9EC"/><rect x="9" y="9" width="6" height="6" rx="1.5" fill="#534AB7"/></svg>
-        </div>
+        <div class="str-icon" style="background:#EEEDFE"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1.5" fill="#534AB7"/><rect x="9" y="1" width="6" height="6" rx="1.5" fill="#AFA9EC"/><rect x="1" y="9" width="6" height="6" rx="1.5" fill="#AFA9EC"/><rect x="9" y="9" width="6" height="6" rx="1.5" fill="#534AB7"/></svg></div>
         <div class="str-name">Operational excellence</div>
         <span class="str-tag" style="background:#EEEDFE;color:#534AB7">delivery reliability</span>
       </div>
@@ -206,9 +196,7 @@ body{padding:12px 8px}
     </div>
     <div class="str-card" onclick="toggle(this)">
       <div class="str-top">
-        <div class="str-icon" style="background:#E1F5EE">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#0F6E56" stroke-width="1.5" fill="none"/><path d="M5 8l2 2 4-4" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        <div class="str-icon" style="background:#E1F5EE"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#0F6E56" stroke-width="1.5" fill="none"/><path d="M5 8l2 2 4-4" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="str-name">AI operationalisation</div>
         <span class="str-tag" style="background:#E1F5EE;color:#0F6E56">top differentiator</span>
       </div>
@@ -221,9 +209,7 @@ body{padding:12px 8px}
     </div>
     <div class="str-card" onclick="toggle(this)">
       <div class="str-top">
-        <div class="str-icon" style="background:#FAECE7">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 14l3-6.5 3.5 4.5 2-2.5 2.5 4.5" stroke="#993C1D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-        </div>
+        <div class="str-icon" style="background:#FAECE7"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 14l3-6.5 3.5 4.5 2-2.5 2.5 4.5" stroke="#993C1D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
         <div class="str-name">Execution from idea to impact</div>
         <span class="str-tag" style="background:#FAECE7;color:#993C1D">idea to shipped</span>
       </div>
@@ -236,9 +222,7 @@ body{padding:12px 8px}
     </div>
     <div class="str-card" onclick="toggle(this)">
       <div class="str-top">
-        <div class="str-icon" style="background:#FAEEDA">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="7" width="14" height="2" rx="1" fill="#854F0B"/><rect x="4" y="3" width="8" height="2" rx="1" fill="#EF9F27"/><rect x="4" y="11" width="8" height="2" rx="1" fill="#EF9F27"/></svg>
-        </div>
+        <div class="str-icon" style="background:#FAEEDA"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="7" width="14" height="2" rx="1" fill="#854F0B"/><rect x="4" y="3" width="8" height="2" rx="1" fill="#EF9F27"/><rect x="4" y="11" width="8" height="2" rx="1" fill="#EF9F27"/></svg></div>
         <div class="str-name">Structure where there was none</div>
         <span class="str-tag" style="background:#FAEEDA;color:#854F0B">scalable systems</span>
       </div>
@@ -252,34 +236,28 @@ body{padding:12px 8px}
   </div>
 
   <div id="achievements" class="panel">
-    <div class="ach">
-      <div class="ach-title">AI-powered training at scale</div>
-      <div class="ach-body">Production-ready AI call simulator across 7 regions, 70 scenarios in the North America NHT programme. Used AI end to end from outlining to delivery to automated evaluation. Nominated AI Champion for the Learning and Content Operations function.</div>
-    </div>
-    <div class="ach">
-      <div class="ach-title">Concierge International Expansion DRI</div>
-      <div class="ach-body">EU Delivery DRI for white-glove programme for enterprise sellers (1M+ GPV) in EU, Australia, and NA. In 2026, redesigned the full learning experience through call driver analysis and built an AI-powered facilitator hub using Claude Code with a new programme calendar aligned to real call patterns.</div>
-    </div>
-    <div class="ach">
-      <div class="ach-title">Enablement playbook from scratch</div>
-      <div class="ach-body">Built EU facilitator playbook across EU, NA, and Australia under tight deadlines. Now the EMEA standard reference for facilitators across regions.</div>
-    </div>
-    <div class="ach">
-      <div class="ach-title">BPO Lisbon site launch</div>
-      <div class="ach-body">Full onboarding and enablement implementation for a new partner site: delivery ownership, tooling readiness, coaching support, and a nesting document co-developed with Senior Leads and the EU Market DRI.</div>
-    </div>
-    <div class="ach">
-      <div class="ach-title">Coaching performance impact</div>
-      <div class="ach-body">Average QA improvement of approximately 17 percentage points across coached advocates through structured, data-informed interventions tied to clear performance benchmarks.</div>
-    </div>
+    <div class="ach"><div class="ach-title">AI-powered training at scale</div><div class="ach-body">Production-ready AI call simulator across 7 regions, 70 scenarios in the North America NHT programme. Used AI end to end from outlining to delivery to automated evaluation. Nominated AI Champion for the Learning and Content Operations function.</div></div>
+    <div class="ach"><div class="ach-title">Concierge International Expansion DRI</div><div class="ach-body">EU Delivery DRI for white-glove programme for enterprise sellers (1M+ GPV) in EU, Australia, and NA. In 2026, redesigned the full learning experience through call driver analysis and built an AI-powered facilitator hub using Claude Code with a new programme calendar aligned to real call patterns.</div></div>
+    <div class="ach"><div class="ach-title">Enablement playbook from scratch</div><div class="ach-body">Built EU facilitator playbook across EU, NA, and Australia under tight deadlines. Now the EMEA standard reference for facilitators across regions.</div></div>
+    <div class="ach"><div class="ach-title">BPO Lisbon site launch</div><div class="ach-body">Full onboarding and enablement implementation for a new partner site: delivery ownership, tooling readiness, coaching support, and a nesting document co-developed with Senior Leads and the EU Market DRI.</div></div>
+    <div class="ach"><div class="ach-title">Coaching performance impact</div><div class="ach-body">Average QA improvement of approximately 17 percentage points across coached advocates through structured, data-informed interventions tied to clear performance benchmarks.</div></div>
   </div>
 </div>
 </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function show(id,el){
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
   document.getElementById(id).classList.add('active');
-  el.classList.a
+  el.classList.add('active');
+}
+function toggle(el){
+  var wasOpen=el.classList.contains('open');
+  document.querySelectorAll('.str-card').forEach(function(c){c.classList.remove('open');});
+  if(!wasOpen){el.classList.add('open');}
+}
+</script>
+</body>
+</html>
